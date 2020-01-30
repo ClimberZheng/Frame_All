@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+    <script type="text/javascript" src="js/util/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="layui/layui.js"></script>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+</head>
+<body>
+
+
+<div class="layui-fluid">
+
+    <div class="layui-row">
+        <!-- 内容替换 start  origin-->
+        <!--        <form id="userSearch" class="layui-form layui-form-pane" method="post" style="margin-top: 20px;">-->
+        <!--            <div class="layui-form-item">-->
+        <!--                <label class="layui-form-label">用户名</label>-->
+        <!--                <div class="layui-input-inline">-->
+        <!--                    <input id="demoReload" name="sysUserName" autocomplete="off" class="layui-input" type="text"/>-->
+        <!--                </div>-->
+        <!--                <button type="reset" class="layui-btn layui-btn-primary">重置</button>-->
+        <!--                <button class="layui-btn" id="tableReload" type="button" lay-filter="tableReload">查询</button>-->
+        <!--            </div>-->
+        <!--        </form>-->
+        <!--new content -->
+        <div class="demoTable">
+            用户名：
+            <div class="layui-inline">
+                <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+            </div>
+            <button class="layui-btn" data-type="reload">搜索</button>
+            <p>tips: 当内容为空时，默认查询所有，支持模糊查询</p>
+        </div>
+        <!--        内容替换 end -->
+    </div>
+    <div class="layui-row">
+        <div class="layui-col-md12">
+            <table id="vipUser" lay-filter="vipUserFilter"></table>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="handelBar">
+    <a class="layui-btn layui-btn-xs" lay-event="save">保存</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+
+
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+    layui.use(['form', 'table', 'layer'], function () {
+        var form = layui.form;
+        var table = layui.table;
+        form.render();
+
+        // var tableIns=table.render({
+        table.render({
+            elem: '#vipUser'
+            , height: 462
+            , url: 'user/userManager/C' //数据接口
+            , initSort: {
+                field: 'userid' //排序字段，对应 cols 设定的各字段名
+                , type: 'asc' //排序方式  asc: 升序、desc: 降序、null: 默认排序
+            }
+            , text: {
+                none: '系统暂无用户' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+            }
+            , page: false //开启分页
+            , cols: [
+                [ //表头
+                    // {type: 'checkbox', width: 50}
+                    {field: 'userid', title: 'ID', width: 60, sort: true}
+                    , {field: 'uName', title: '用户名', edit: 'text', width: 100, sort: true}
+                    , {field: 'uPwd', title: '密码', edit: 'text', width: 100, sort: true}
+                    , {field: 'statue', title: '角色', edit: 'text', width: 60}
+                    , {field: 'realname', title: '姓名', edit: 'text', width: 100}
+                    , {field: 'sex', title: '性别', edit: 'text', width: 60}
+                    , {field: 'age', title: '年龄', edit: 'text', width: 100}
+                    , {field: 'telno', title: '联系方式', edit: 'text', width: 160, sort: true}
+                    , {field: 'idcardno', title: '身份证号', edit: 'text', width: 180, sort: true}
+                    , {title: '操作', toolbar: '#handelBar', width: 160, sort: true}
+
+                ]
+            ]
+            , id: 'vipUserReload'
+            , done: function (res, curr, count) {
+                //如果是异步请求数据方式，res即为你接口返回的信息。
+                //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                //// console.log(res);
+                //得到当前页码
+                // console.log(res);
+                // //得到数据总量
+                // //// console.log(count);
+                // pageCurr=curr;
+            }
+        });
+
+        //监听单元格编辑
+        table.on('edit(vipUserFilter)', function (obj) {
+            var value = obj.value //得到修改后的值
+                , data = obj.data //得到所在行所有键值
+                , field = obj.field; //得到字段
+            // console.log(value);
+            // console.log(data);
+            // console.log(field);
+
+            // console.log('[ID: ' + data.id + '] ' + field + ' 字段更改为：' + value);
+        });
+
+        table.on('tool(vipUserFilter)', function (obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+            var data = obj.data;//获得当前行数据
+            var requestData = JSON.stringify(data);
+            layEvent = obj.event; //获得 lay-event 对应的值
+            if (layEvent === 'save') {
+                // console.log("save");
+                layer.msg(requestData);
+                $.ajax({
+                    type: "post",
+                    contentType: "application/json",//指定返回类型
+                    url: "user/updateUser/sys",//请求地址
+                    data: requestData,
+                    cache: false,  //禁用缓存
+                    dataType: "text",//预期返回数据类型
+                    async: false,
+                    success: function (responseData) {
+                        if ('未登录' == responseData) {
+                            layer.alert(
+                                responseData + ',请先登录再进行此操作',
+                                {icon: 2, closeBtn: 0},
+                                function () {
+                                    window.location.replace("/LFitness/");
+                                });
+                        }
+                        layer.msg(responseData);
+                    },
+                    error: function (c) {
+                        // console.log("服务器响应异常");
+                    }
+                });
+
+
+            } else if (layEvent === 'del') {
+                layer.confirm('真的删除行么', function (index) {
+                    obj.del(obj); //删除对应行（tr）的DOM结构
+                    layer.close(index);
+                    var userId=obj.data.userid;
+                    //向服务端发送删除指令
+                    var urlValue = "user/removeUser/"+userId
+                    $.ajax({
+                        type: "post",
+                        contentType: "application/json",//指定返回类型
+                        url: urlValue,//请求地址
+                        // data: requestData,
+                        cache: false,  //禁用缓存
+                        dataType: "text",//预期返回数据类型
+                        async: false,
+                        success: function (responseData) {
+                            if ('删除成功' != responseData) {
+                                layer.alert(
+                                    responseData,
+                                    {icon: 2, closeBtn: 0},
+                                    function () {
+                                        window.location.replace("/LFitness/");
+                                    });
+                            }else{
+                                layer.msg(responseData);
+                            }
+                        },
+                        error: function (c) {
+                            // console.log("服务器响应异常");
+                        }
+                    });
+
+                });
+            } else if (layEvent === 'edit') {
+                editor(obj);
+            }
+        });
+
+        var $ = layui.$, active = {
+            reload: function () {
+                // 表单
+                var demoReload = $('#demoReload');
+                var keyWords = demoReload.val();
+                // console.log(demoReload.val());
+                var urlvaue = (null == keyWords || "" == keyWords) ? "user/userManager/C" : "user/userManager/C/" + keyWords;
+                //执行重载
+                table.reload('vipUserReload', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    ,
+                    elem: '#vipUser'
+                    , height: 462
+                    , url: urlvaue //数据接口
+                    , initSort: {
+                        field: 'userid' //排序字段，对应 cols 设定的各字段名
+                        , type: 'asc' //排序方式  asc: 升序、desc: 降序、null: 默认排序
+                    }
+                    , text: {
+                        none: '系统暂无用户' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+                    }
+                    , page: false //开启分页
+                    , cols: [
+                        [ //表头
+                            // {type: 'checkbox', width: 50}
+                            {field: 'userid', title: 'ID', width: 60, sort: true}
+                            , {field: 'uName', title: '用户名', edit: 'text', width: 100, sort: true}
+                            , {field: 'uPwd', title: '密码', edit: 'text', width: 100, sort: true}
+                            , {field: 'statue', title: '角色', edit: 'text', width: 60}
+                            , {field: 'realname', title: '姓名', edit: 'text', width: 100}
+                            , {field: 'sex', title: '性别', edit: 'text', width: 60}
+                            , {field: 'age', title: '年龄', edit: 'text', width: 100}
+                            , {field: 'telno', title: '联系方式', edit: 'text', width: 160, sort: true}
+                            , {field: 'idcardno', title: '身份证号', edit: 'text', width: 180, sort: true}
+                            , {title: '操作', toolbar: '#handelBar', width: 160, sort: true}
+
+                        ]
+                    ]
+                    , id: 'vipUserReload'
+                    , done: function (res, curr, count) {
+                        //如果是异步请求数据方式，res即为你接口返回的信息。
+                        //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                        //// console.log(res);
+                        //得到当前页码
+                        // console.log(res);
+                        // //得到数据总量
+                        // //// console.log(count);
+                        // pageCurr=curr;
+                    }
+                    // where: {
+                    //     key: {
+                    //         id: demoReload.val()
+                    //     }
+                    //
+                    // }
+                }, 'data');
+            }
+        };
+
+        $('.demoTable .layui-btn').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+        // 此处实现的是数据的条件查询
+        // 思路： 通过对事件的捕捉，从发起表格的重载
+        // 事件捕捉：
+
+
+        // 开发阶段问题描述： 表单依然跳转，出现页面一场  不支持 post 数据异常
+        // $("#tableReload").on('click', function () {
+        //     var keyWords = $("#demoReload").val();
+        //     var url = "user/userManager/C/"+keyWords;
+        //     // console.log(url);
+        //
+        //     tableIns.reload({
+        //         where: { //设定异步数据接口的额外参数，任意设
+        //             elem: '#vipUser'
+        //             , height: 312
+        //             , url: url //数据接口
+        //             , initSort: {
+        //                 field: 'userid' //排序字段，对应 cols 设定的各字段名
+        //                 , type: 'asc' //排序方式  asc: 升序、desc: 降序、null: 默认排序
+        //             }
+        //             // , text: {
+        //             //     none: '系统暂无用户' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+        //             // }
+        //             , page: false //开启分页
+        //             , cols: [[ //表头
+        //                     // {type: 'checkbox', width: 50}
+        //                     {field: 'userid', title: 'ID', width: 60, sort: true}
+        //                     , {field: 'uName', title: '用户名', edit: 'text', width: 100, sort: true}
+        //                     , {field: 'uPwd', title: '密码', edit: 'text', width: 100, sort: true}
+        //                     , {field: 'statue', title: '角色', edit: 'text', width: 60}
+        //                     , {field: 'realname', title: '姓名', edit: 'text', width: 100}
+        //                     , {field: 'sex', title: '性别', edit: 'text', width: 60}
+        //                     , {field: 'age', title: '年龄', edit: 'text', width: 100}
+        //                     , {field: 'telno', title: '联系方式', edit: 'text', width: 160, sort: true}
+        //                     , {field: 'idcardno', title: '身份证号', edit: 'text', width: 180, sort: true}
+        //                     , {title: '操作', toolbar: '#handelBar', width: 160, sort: true}
+        //                 ]]
+        //
+        //         }
+        //         ,page: {
+        //             curr: 1 //重新从第 1 页开始
+        //         }
+        //     });
+        //
+        // });
+
+        //
+        // $('.demoTable .layui-btn').on('click', function () {
+        //     var type = $(this).data('type');
+        //     active[type] ? active[type].call(this) : '';
+        // });
+        //
+
+
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+  <script type="text/javascript" src="js/util/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="layui/layui.js"></script>
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+</head>
+<body>
+
+<div class="layui-fluid">
+  <div class="layui-row">
+    <div class="demoTable">
+      商品名称：
+      <div class="layui-inline">
+        <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+      </div>
+      <button class="layui-btn" id="commDataSearch" data-type="reload">搜索</button>
+      <p>tips: 当内容为空时，默认查询所有，支持模糊查询</p>
+    </div>
+    <!--        内容替换 end -->
+  </div>
+  <div class="layui-row">
+    <div class="layui-col-md12">
+      <table id="comManage" lay-filter="comManageFilter"></table>
+    </div>
+  </div>
+</div>
+
+<script type="text/html" id="handelBar">
+  <a class="layui-btn layui-btn-xs tableClickEvent" lay-event="save">保存</a>
+  <a class="layui-btn layui-btn-danger layui-btn-xs tableClickEvent" lay-event="del">删除</a>
+</script>
+<script type="text/html" id="picBar">
+  <button type="button" class="layui-btn layui-btn-xs tableClickEvent" lay-event="reShowPic"   id="showPic">预览</button>
+  <button type="button" class="layui-btn layui-btn-xs layui-btn-warm tableClickEvent changePicButton" lay-event="picReUpload" data-type="auto"   >更换</button>
+</script>
+
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+  layui.use(['form', 'table', 'layer','upload'], function () {
+    var form = layui.form;
+    var table = layui.table;
+    var upload = layui.upload;
+    var layer= layui.layer;
+    form.render();
+
+    // 表格的初始化
+    table.render({
+      elem: '#comManage'
+      , height: 462
+      , url: 'commodity/getAllInfo' //数据接口
+      , initSort: {
+        field: 'comid' //排序字段，对应 cols 设定的各字段名
+        , type: 'asc' //排序方式  asc: 升序、desc: 降序、null: 默认排序
+      }
+      , text: {
+        none: '系统暂无任何产品' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+      }
+      , page: false //开启分页
+      , cols: [
+        [ //表头
+          // {type: 'checkbox', width: 50}
+          {field: 'comid', title: 'ID', width: 60, sort: true}
+          , {field: 'cName', title: '商品名称', edit: 'text', width: 160, sort: true}
+          , {field: 'price', title: '价格', edit: 'text', width: 100}
+          , {field: 'pic', title: '图片路径', width: 200}
+          , { title: '管理图片',  toolbar: '#picBar', width: 130}
+          , {field: 'description', title: '描述', edit: 'text', width: 280, sort: true}
+          , {title: '操作', toolbar: '#handelBar', width: 150, sort: true}
+        ]
+      ]
+      , id: 'comManageReload'
+      , done: function (res, curr, count) {
+        // console.log(res);
+      }
+    });
+
+    //监听单元格编辑
+    table.on('edit(comManageFilter)', function (obj) {
+      //obj 为 编辑后的值
+      var value = obj.value //得到修改后的值
+              , data = obj.data //得到所在行所有键值
+              , field = obj.field; //得到字段
+      // console.log(value);
+      // console.log(data);
+      // console.log(field);
+
+      // console.log('[ID: ' + data.id + '] ' + field + ' 字段更改为：' + value);
+    });
+
+    //注：tool是工具条事件名，  comManageFilter是table原始容器lay-filter对应的值
+    table.on('tool(comManageFilter)', function (obj) {
+
+      var data = obj.data;//获得当前行数据
+      var requestData = JSON.stringify(data);
+      layEvent = obj.event; //获得 lay-event 对应的值
+      // console.log("事件发生 : "+ layEvent);
+      if (layEvent === 'save') {
+        // console.log("save");
+        layer.msg(requestData);
+        $.ajax({
+          type: "post",
+          contentType: "application/json",//指定返回类型
+          url: "commodity/updateCommdity",//请求地址
+          data: requestData,
+          cache: false,  //禁用缓存
+          dataType: "text",//预期返回数据类型
+          async: false,
+          success: function (responseData) {
+            if ('未登录' == responseData) {
+              layer.alert(
+                      responseData + ',请先登录再进行此操作',
+                      {icon: 2, closeBtn: 0},
+                      function () {
+                        window.location.replace("/LFitness/");
+                      });
+            }
+            layer.msg(responseData);
+          },
+          error: function (c) {
+            // console.log("服务器响应异常");
+          }
+        });
+
+
+      } else if (layEvent === 'del') {
+        layer.confirm('真的删除行么', function (index) {
+          obj.del(obj); //删除对应行（tr）的DOM结构
+          layer.close(index);
+          var comid=obj.data.comid;
+          //向服务端发送删除指令
+          var urlValue = "commodity/removeCommdity/"+comid;
+          $.ajax({
+            type: "post",
+            contentType: "application/json",//指定返回类型
+            url: urlValue,//请求地址
+            // data: requestData,
+            cache: false,  //禁用缓存
+            dataType: "text",//预期返回数据类型
+            async: false,
+            success: function (responseData) {
+              if ('下架成功' != responseData) {
+                layer.alert(
+                        responseData,
+                        {icon: 2, closeBtn: 0},
+                        function () {
+                          window.location.replace("/LFitness/");
+                        });
+              }else{
+                layer.msg(responseData);
+              }
+            },
+            error: function (c) {
+              // console.log("服务器响应异常");
+            }
+          });
+
+        });
+      } else if (layEvent === 'edit') {
+        editor(obj);
+      } else if(layEvent === 'reShowPic'){
+        var contentValue = "<img src =  '"+data.pic+"'>";
+        layer.open({
+          type: 1
+          ,title: false //不显示标题栏
+          ,closeBtn: false
+          ,area: '300px;'
+          ,shade: 0.8
+          ,id: 'LAY_reShowPic' //设定一个id，防止重复弹出
+          ,btn: ['关闭']
+          ,moveType: 1 //拖拽模式，0或者1
+          ,content: contentValue
+          //该功能无需回调，因此需要注释
+          // ,success: function(layero){
+          //   var btn = layero.find('.layui-layer-btn');
+          //   btn.css('text-align', 'center');
+          //   btn.find('.layui-layer-btn0').attr({
+          //     href: 'http://www.layui.com/'
+          //     ,target: '_blank'
+          //   });
+          // }
+        });
+
+      }
+      else if(layEvent === 'picReUpload'){
+        var comid=data.comid;
+        // console.log("即将为 "+comid+"号产品更换图片");
+        window.location.href = "changeComPic/"+comid;
+
+        // var uploadInst = upload.render({
+        //   elem: '.changePicButton' //绑定元素
+        //   ,auto: true
+        //   ,url: 'commodity/picUpload' //上传接口
+        //   // ,data: {"comid":comid}
+        //   ,before: function(){
+        //     // console.log("进入上传的部分");
+        //   }
+        //   ,done: function(res){
+        //     // console.log(res);
+        //     layer.msg(res.msg);
+        //     //上传完毕, 通过再一次查询重新获取数据
+        //     $("#commDataSearch").click();
+        //   }
+        //   ,error: function(e){
+        //     // console.log("请求异常回调");
+        //   }
+        // });
+      }
+
+
+    });
+
+    var $ = layui.$, active = {
+      reload: function () {
+        // 表单
+        var demoReload = $('#demoReload');
+        var keyWords = demoReload.val();
+        // console.log(demoReload.val());
+        var urlvaue = (null == keyWords || "" == keyWords) ? "commodity/getAllInfo" : "commodity/getCommdity/" + keyWords;
+        //执行重载
+        table.reload('comManageReload', {
+          page: {
+            curr: 1 //重新从第 1 页开始
+          }
+          ,
+          elem: '#comManage'
+          , height: 462
+          , url: urlvaue //数据接口
+          , initSort: {
+            field: 'comid' //排序字段，对应 cols 设定的各字段名
+            , type: 'asc' //排序方式  asc: 升序、desc: 降序、null: 默认排序
+          }
+          , text: {
+            none: '系统暂无任何产品' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+          }
+          , page: false //开启分页
+          , cols: [
+            [ //表头
+              // {type: 'checkbox', width: 50}
+              {field: 'comid', title: 'ID', width: 60, sort: true}
+              , {field: 'cName', title: '商品名称', edit: 'text', width: 160, sort: true}
+              , {field: 'price', title: '价格', edit: 'text', width: 100}
+              , {field: 'pic', title: '图片路径', width: 200}
+              , { title: '管理图片',  toolbar: '#picBar', width: 130}
+              , {field: 'description', title: '描述', edit: 'text', width: 280, sort: true}
+              , {title: '操作', toolbar: '#handelBar', width: 150, sort: true}
+
+            ]
+          ]
+          , id: 'comManageReload'
+          , done: function (res, curr, count) {
+            //如果是异步请求数据方式，res即为你接口返回的信息。
+            //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+            //// console.log(res);
+            //得到当前页码
+            // console.log(res);
+          }
+        }, 'data');
+      }
+    };
+
+    // 用于调用 表格重载的事件
+    $('.demoTable .layui-btn').on('click', function () {
+      var type = $(this).data('type');
+      active[type] ? active[type].call(this) : '';
+    });
+
+
+  });
+
+</script>
+
+</body>
+</html>

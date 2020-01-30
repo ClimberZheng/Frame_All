@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+    <script type="text/javascript" src="../js/util/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../layui/layui.js"></script>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+</head>
+<body>
+
+<div class="site-nav-bg">
+    <div class="site-nav w1200">
+        <p class="sn-back-home">
+            <i class="layui-icon layui-icon-home"></i>
+            <a href="../index">首页</a>
+        </p>
+        <div class="sn-quick-menu">
+            <div class="login"><a href="/LFitness/">登录</a></div>
+            <!--            <div class="sp-cart"><a href="shopcart.html">购物车</a><span>2</span></div>-->
+        </div>
+    </div>
+</div>
+
+
+<div class="header">
+    <div class="headerLayout w1200">
+        <div class="headerCon">
+            <h1 class="mallLogo">
+                <!--                <a href="#" title="母婴商城">-->
+                <!--                    <img src="../img/logo.png">-->
+                <!--                </a>-->
+            </h1>
+            <div class="mallSearch">
+                <form action="" class="layui-form" novalidate>
+                    <input type="text" name="title" required lay-verify="required" autocomplete="off"
+                           class="layui-input" placeholder="请输入需要的商品">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">
+                        <i class="layui-icon layui-icon-search"></i>
+                    </button>
+                    <input type="hidden" name="" value="">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="content content-nav-base datails-content">
+    <div class="main-nav">
+        <div class="inner-cont0">
+            <div class="inner-cont1 w1200">
+                <div class="inner-cont2">
+                    <a href="commodity.html" class="active">所有商品</a>
+                    <!--        <a href="commodity.html" class="active" th:text="${commodity.getcName()}">所有商品</a>-->
+
+                    <a href="buytoday.html">今日团购</a>
+                    <a href="information.html">母婴资讯</a>
+                    <a href="about.html">关于我们</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="data-cont-wrap w1200">
+        <div class="crumb">
+            <a href="javascript:;">首页</a>
+            <span>></span>
+            <a href="index">所有商品</a>
+            <span>></span>
+            <a href="javascript:;">产品详情</a>
+        </div>
+        <div class="product-intro layui-clear">
+            <div class="preview-wrap">
+                <a href="javascript:;"><img class="detailPic" th:src="'../'+${commodity.getPic()}"></a>
+            </div>
+            <div class="itemInfo-wrap">
+                <div class="itemInfo">
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+<!--                            <label class="layui-form-label">应付金额</label>-->
+                            <div class="layui-input-block">
+                                <span th:text="${commodity.getDescription()}"></span>
+<!--                                <input type="text" width="10ch" name="description" required lay-verify="required"-->
+<!--                                       autocomplete="off" th:value="${commodity.getDescription()}" class="layui-input"-->
+<!--                                       readonly>-->
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">应付金额</label>
+                            <div class="layui-input-inline">
+                                <input type="text" width="10ch" name="pay" required lay-verify="required"
+                                       autocomplete="off" th:value="${commodity.getPrice()}" class="layui-input"
+                                       readonly>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">收货人姓名</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="revicename" required lay-verify="required" autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">收货人联系方式</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="recivetel" required lay-verify="required" autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">收货地址</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="reciveadre" required lay-verify="required" autocomplete="off"
+                                       class="layui-input">
+                            </div>
+
+                        </div>
+                        <input type="hidden" name="comid" th:value="${commodity.getComid()}" required lay-verify="required" autocomplete="off"
+                               class="layui-input">
+
+
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit lay-filter="formDemo">立即购买</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+
+
+    //Demo
+    layui.use(['form', 'layer'], function () {
+        var form = layui.form;
+        form.render();
+
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            var requestData = JSON.stringify(data.field);
+            // console.log(data);
+            $.ajax({
+                type: "post",
+                contentType: "application/json",//指定返回类型
+                url: "../order/saveOrder",//请求地址
+                data: requestData,
+                cache: false,  //禁用缓存
+                dataType: "text",//预期返回数据类型
+                async: false,
+                success: function (responseData) {
+                    if('添加失败,请先登录'==responseData){
+                        layer.alert(
+                            responseData + ',即将跳转到登录页面',
+                            {icon: 2, closeBtn: 0},
+                            function () {
+                                window.location.replace("/LFitness/");
+                            });
+                    }
+                     if('添加成功'==responseData){
+                        layer.alert(
+                            responseData + ',即将跳转到主页面',
+                            {icon: 1, closeBtn: 1},
+                            function () {
+                                window.location.replace("/LFitness/index");
+                            });
+                    }
+
+
+                },
+                error: function (c) {
+                    // console.log("服务器响应异常");
+                }
+            });
+            // layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    })
+    ;
+</script>
+
+
+</body>
+</html>

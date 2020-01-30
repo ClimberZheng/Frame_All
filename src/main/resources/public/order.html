@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+    <script type="text/javascript" src="js/util/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="layui/layui.js"></script>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+</head>
+<body>
+
+
+<div class="layui-fluid">
+
+    <div class="layui-row">
+        <div class="demoTable">
+            订单号：
+            <div class="layui-inline">
+                <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+            </div>
+            <button class="layui-btn" data-type="reload">搜索</button>
+            <p>tips: 当内容为空时，默认查询所有，支持模糊查询</p>
+        </div>
+        <!--        内容替换 end -->
+    </div>
+    <div class="layui-row">
+        <div class="layui-col-md12">
+            <table id="OrderMana" lay-filter="OrderManaFilter"></table>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="handelBar">
+    <a class="layui-btn layui-btn-xs" lay-event="save">保存</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+
+
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+    layui.use(['form', 'table', 'layer'], function () {
+        var form = layui.form;
+        var table = layui.table;
+        form.render();
+
+        // var tableIns=table.render({
+        table.render({
+            elem: '#OrderMana'
+            , height: 462
+            , url: 'order/getAllOrder' //数据接口
+            , initSort: {
+                field: 'createtime' //排序字段，对应 cols 设定的各字段名
+                , type: 'asc' //排序方式  asc: 升序、desc: 降序、null: 默认排序
+            }
+            , text: {
+                none: '系统暂无订单' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+            }
+            , page: false //开启分页
+            , cols: [
+                [ //表头
+                    // {type: 'checkbox', width: 50}
+                    //, {field: 'commodity', title: '商品名称', width: 150,templet: '<div>{{d.commodity.cName}}</div>'}
+                    {field: 'orderid', title: 'ID', width: 60, sort: true}
+                    , {field: 'commodity', title: '商品', width: 150,templet: '<div>{{d.commodity.cName}}</div>'}
+                    , {field: 'cnum', title: '数量', edit: 'text', width: 60, sort: true}
+                    , {field: 'pay', title: '实付金额',edit: 'text', width: 100, sort: true}
+                    , {field: 'fUser', title: '发起方', width: 100,templet: '<div>{{d.fUser.realname}}</div>'}
+                    , {field: 'fUser', title: '发起方联系方式', width: 150,templet: '<div>{{d.fUser.telno}}</div>'}
+                    , {field: 'ono', title: '订单号', width: 190}
+                    , {field: 'revicename', title: '收货人', edit: 'text', width: 100}
+                    , {field: 'recivetel', title: '收货人联系方式', edit: 'text', width: 150}
+                    , {field: 'reciveadre', title: '收货地址', edit: 'text', width: 180}
+                    , {field: 'createtime', title: '发起时间',  width: 150}
+                    , {title: '操作', toolbar: '#handelBar', width: 160, sort: true}
+
+                ]
+            ]
+            , id: 'OrderManaReload'
+            , done: function (res, curr, count) {
+                //如果是异步请求数据方式，res即为你接口返回的信息。
+                //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                //// console.log(res);
+                //得到当前页码
+                // console.log(res);
+                // //得到数据总量
+                // //// console.log(count);
+                // pageCurr=curr;
+            }
+        });
+
+        //监听单元格编辑
+        table.on('edit(OrderManaFilter)', function (obj) {
+            var value = obj.value //得到修改后的值
+                , data = obj.data //得到所在行所有键值
+                , field = obj.field; //得到字段
+            //调试时使用
+            // // console.log(value);
+            // // console.log(data);
+            // // console.log(field);
+            //
+            // // console.log('[ID: ' + data.id + '] ' + field + ' 字段更改为：' + value);
+        });
+
+        table.on('tool(OrderManaFilter)', function (obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+            var data = obj.data;//获得当前行数据
+            var requestData = JSON.stringify(data);
+            layEvent = obj.event; //获得 lay-event 对应的值
+            if (layEvent === 'save') {
+                // // console.log("save");
+                // layer.msg(requestData);
+                $.ajax({
+                    type: "post",
+                    contentType: "application/json",//指定返回类型
+                    url: "order/modifyOrder",//请求地址
+                    data: requestData,
+                    cache: false,  //禁用缓存
+                    dataType: "text",//预期返回数据类型
+                    async: false,
+                    success: function (responseData) {
+                        // // console.log(responseData);
+                        if ('未登录' == responseData) {
+                            layer.alert(
+                                responseData + ',请先登录再进行此操作',
+                                {icon: 2, closeBtn: 0},
+                                function () {
+                                    window.location.replace("/LFitness/");
+                                });
+                        }
+                        layer.msg(responseData);
+                    },
+                    error: function (c) {
+                        // console.log("服务器响应异常");
+                    }
+                });
+
+
+            } else if (layEvent === 'del') {
+                layer.confirm('真的删除行么', function (index) {
+                    obj.del(obj); //删除对应行（tr）的DOM结构
+                    layer.close(index);
+                    var orderid=obj.data.orderid;
+                    //向服务端发送删除指令
+                    var urlValue = "order/removeOrder/"+orderid;
+                    $.ajax({
+                        type: "post",
+                        contentType: "application/json",//指定返回类型
+                        url: urlValue,//请求地址
+                        // data: requestData,
+                        cache: false,  //禁用缓存
+                        dataType: "text",//预期返回数据类型
+                        async: false,
+                        success: function (responseData) {
+                            if ('删除成功' != responseData) {
+                                layer.alert(
+                                    responseData,
+                                    {icon: 2, closeBtn: 0},
+                                    function () {
+                                        window.location.replace("/LFitness/");
+                                    });
+                            }else{
+                                layer.msg(responseData);
+                            }
+                        },
+                        error: function (c) {
+                            // console.log("服务器响应异常");
+                        }
+                    });
+
+                });
+            } else if (layEvent === 'edit') {
+                editor(obj);
+            }
+        });
+
+        var $ = layui.$, active = {
+            reload: function () {
+                // 表单
+                var demoReload = $('#demoReload');
+                var keyWords = demoReload.val();
+                // console.log(demoReload.val());
+                var urlvaue = (null == keyWords || "" == keyWords) ? "order/getAllOrder" : "order/getOrder/" + keyWords;
+                //执行重载
+                table.reload('OrderManaReload', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    ,
+                    elem: '#OrderMana'
+                    , height: 462
+                    , url: urlvaue //数据接口
+                    , initSort: {
+                        field: 'createtime' //排序字段，对应 cols 设定的各字段名
+                        , type: 'asc' //排序方式  asc: 升序、desc: 降序、null: 默认排序
+                    }
+                    , text: {
+                        none: '系统暂无用户' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+                    }
+                    , page: false //开启分页
+                    , cols: [
+                        [ //表头
+                            {field: 'orderid', title: 'ID', width: 60, sort: true}
+                            , {field: 'commodity', title: '商品', width: 150,templet: '<div>{{d.commodity.cName}}</div>'}
+                            , {field: 'cnum', title: '数量', edit: 'text', width: 60, sort: true}
+                            , {field: 'pay', title: '实付金额',edit: 'text', width: 100, sort: true}
+                            , {field: 'fUser', title: '发起方', width: 100,templet: '<div>{{d.fUser.realname}}</div>'}
+                            , {field: 'fUser', title: '发起方联系方式', width: 150,templet: '<div>{{d.fUser.telno}}</div>'}
+                            , {field: 'ono', title: '订单号', width: 190}
+                            , {field: 'revicename', title: '收货人', edit: 'text', width: 100}
+                            , {field: 'recivetel', title: '收货人联系方式', edit: 'text', width: 150}
+                            , {field: 'reciveadre', title: '收货地址', edit: 'text', width: 180}
+                            , {field: 'createtime', title: '发起时间',  width: 150}
+                            , {title: '操作', toolbar: '#handelBar', width: 160, sort: true}
+                        ]
+                    ]
+                    , id: 'OrderManaReload'
+                    , done: function (res, curr, count) {
+                        //如果是异步请求数据方式，res即为你接口返回的信息。
+                        //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                        //// console.log(res);
+                        //得到当前页码
+                        // console.log(res);
+                    }
+                }, 'data');
+            }
+        };
+
+        $('.demoTable .layui-btn').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+
+
+    });
+
+</script>
+
+</body>
+</html>

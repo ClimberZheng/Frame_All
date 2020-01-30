@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>罗氏健身</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font_24081_qs69ykjbea.css">
+    <link rel="stylesheet" href="css/global.css" charset="utf-8">
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/util/jquery-1.12.4.min.js"></script>
+
+</head>
+<body>
+<div class="fly-header layui-bg-black">
+    <div class="layui-container">
+        <ul class="layui-nav fly-nav layui-hide-xs">
+            <li class="layui-nav-item"><a href="javascript:;"><i class="iconfont " style="top: 1px;"></i></a>
+
+            <li class="layui-nav-item">
+                <a href="http://www.layui.com/" style="font-family: 华文行楷;font-size: 30px;">
+                    <!--                    <i class="iconfont icon-ui"></i>-->
+                    罗氏健身</a>
+            </li>
+        </ul>
+        <ul class="layui-nav fly-nav-user">
+            <li class="layui-nav-item"><a class="fly-nav-avatar" href="javascript:;" id="LAY_header_avatar">
+                <cite class="layui-hide-xs" th:text="${session.loginUser.getuName()}">小罗</cite>
+                <img src="pic/header.jpg"> </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="layui-container fly-marginTop fly-user-main">
+    <ul class="layui-nav layui-nav-tree layui-inline" lay-filter="user">
+        <li class="layui-nav-item layui-this">
+            <a href="javascript:;" onclick="updateMess()">
+                <i class="layui-icon">&#xe612;</i> 信息管理 </a></li>
+        <li class="layui-nav-item "><a href="javascript:;" onclick="resetPwdTab()"> <i class="layui-icon">&#xe683;</i>
+            密码重置 </a></li>
+
+        <li class="layui-nav-item "><a href="javascript:;" onclick="orderTab()"> <i class="layui-icon ">&#xe60a;</i>
+            已购产品 </a></li>
+        <li class="layui-nav-item"><a href="index"> <i class="layui-icon">&#xe68e;</i> 返回主页 </a></li>
+    </ul>
+    <div class="site-tree-mobile layui-hide"><i class="layui-icon">&#xe602;</i></div>
+    <div class="site-mobile-shade"></div>
+    <div class="fly-panel fly-panel-user" pad20>
+        <div class="layui-tab layui-tab-brief" lay-filter="user">
+            <ul class="layui-tab-title" id="LAY_mine">
+                <li class="layui-this" lay-id="info" id="updateMess">我的资料</li>
+                <li lay-id="pass" id="resetTab">密码</li>
+                <li lay-id="avatar" id="orderTab">我的订单</li>
+                <!--                                <li lay-id="bind">帐号绑定</li>-->
+            </ul>
+            <div class="layui-tab-content" style="padding: 20px 0;">
+                <div class="layui-form layui-form-pane layui-tab-item layui-show">
+                    <form class="layui-form" method="post">
+                        <div class="layui-form-item">
+                            <label for="L_uName" class="layui-form-label">用户名</label>
+                            <div class="layui-input-inline">
+                                <input id="L_uName" type="text" name="uName" required
+                                       class="layui-input" th:value="${fUser.getuName()}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label for="L_realName" class="layui-form-label">姓名</label>
+                            <div class="layui-input-inline">
+                                <input id="L_realName" type="text" name="realname" required readonly
+                                       class="layui-input" th:value="${userInfo.getRealname()}">
+                            </div>
+                            <!--                            <div class="layui-form-mid layui-word-aux">您需要完成手机验证才可进行社区发帖/回帖等操作</div>-->
+                        </div>
+                        <div class="layui-form-item">
+                            <label for="L_sex" class="layui-form-label">性别</label>
+                            <div class="layui-input-inline">
+
+                                <select id="L_sex" th:value="${userInfo.getSex()}" name="sex" lay-verify="required">
+                                    <option value="男">请选择性别</option>
+                                    <option th:selected="${userInfo.getSex()=='男'}" value="男">男</option>
+                                    <option th:selected="${userInfo.getSex()=='女'}" value="女">女</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">年龄</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="age" autocomplete="off"
+                                       th:value="${userInfo.getAge()}"
+                                       class="layui-input"></div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label for="L_address" class="layui-form-label">住址</label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="L_address" name="address"
+                                       lay-verify="required" autocomplete="off" th:value="${userInfo.getAddress()}"
+                                       class="layui-input"></div>
+
+                        </div>
+                        <div class="layui-form-item">
+                            <label for="L_telNo" class="layui-form-label">联系方式</label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="L_telNo" name="telno"
+                                       autocomplete="off" th:value="${userInfo.getTelno()}" class="layui-input">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label for="L_idCardNo" class="layui-form-label">证件号</label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="L_idCardNo" name="idcardno"
+                                       autocomplete="off" th:value="${userInfo.getIdcardno()}" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <button class="layui-btn" key="set-mine" lay-filter="personalMessForm" lay-submit>确认修改
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="layui-form layui-form-pane layui-tab-item">
+                    <form class="layui-form" method="post">
+                        <div class="layui-form-item"><label for="L_pwd" class="layui-form-label">新密码</label>
+                            <div class="layui-input-inline"><input type="password" id="L_pwd" name="pwd" required
+                                                                   lay-verify="required" autocomplete="off"
+                                                                   class="layui-input"></div>
+                            <div class="layui-form-mid layui-word-aux">
+                                <span style="color: red" id="remindMess">两次密码应当一致哦</span>
+                            </div>
+                        </div>
+                        <div class="layui-form-item"><label for="L_ensurePwd" class="layui-form-label">确认密码</label>
+                            <div class="layui-input-inline"><input type="password" id="L_ensurePwd" name="ensurePwd"
+                                                                   required
+                                                                   lay-verify="required" autocomplete="off"
+                                                                   class="layui-input"></div>
+                        </div>
+                        <div class="layui-form-item">
+                            <button class="layui-btn" key="set-mine" lay-filter="resetPwdForm" lay-submit>确认修改</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="layui-form layui-form-pane layui-tab-item">
+                    <table id="personalOrderInfo" lay-filter="test"></table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script th:inline="none">
+    //输入框的值改变时触发
+    $("#L_ensurePwd").on("input", function () {
+        var pwd = $("#L_pwd").val();
+        var enPwd = $("#L_ensurePwd").val();
+
+        if (pwd != enPwd) {
+            $("#remindMess").text("两次输入的密码不一致");
+        } else {
+            $("#remindMess").text("")
+        }
+    });
+
+
+    layui.use(['form', 'table'], function () {
+        var form = layui.form;
+        var table = layui.table;
+        form.render();
+
+        table.render({
+            elem: '#personalOrderInfo'
+            , height: 312
+            , url: 'order/getPersonalOrder' //数据接口
+            ,initSort: {
+                field: 'createtime' //排序字段，对应 cols 设定的各字段名
+                ,type: 'desc' //排序方式  asc: 升序、desc: 降序、null: 默认排序
+            }
+            ,text: {
+                none: '您还没有历史订单哦' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+            }
+            , page: false //开启分页
+            , cols: [
+                [ //表头
+                    {field: 'orderid', title: 'ID', width: 80, sort: true}
+                    , {field: 'revicename', title: '收货人姓名', width: 130, sort: true}
+                    , {field: 'recivetel', title: '收货人联系方式', width: 160, sort: true}
+                    , {field: 'reciveadre', title: '收货地址', width: 160}
+                    , {field: 'commodity', title: '商品名称', width: 150,templet: '<div>{{d.commodity.cName}}</div>'}
+                    , {field: 'ono', title: '订单编号', width: 220}
+                    , {field: 'cnum', title: '购买数量', width: 100}
+                    , {field: 'pay', title: '实付金额', width: 130, sort: true}
+                    , {field: 'createtime', title: '发起时间', width: 160, sort: true}
+                ]
+            ]
+            ,done: function(res, curr, count){
+                //如果是异步请求数据方式，res即为你接口返回的信息。
+                //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                //// console.log(res);
+                //得到当前页码
+                // console.log(res);
+                // $("[data-field='userStatus']").children().each(function(){
+                //     if($(this).text()=='1'){
+                //         $(this).text("有效")
+                //     }else if($(this).text()=='0'){
+                //         $(this).text("失效")
+                //     }
+                // });
+                // //得到数据总量
+                // //// console.log(count);
+                // pageCurr=curr;
+            }
+        });
+
+
+        //监听提交
+        form.on('submit(personalMessForm)', function (data) {
+            // console.log(data);
+            var requestMessage = JSON.stringify(data.field);
+            $.ajax({
+                type: "post",
+                contentType: "application/json",//指定返回类型
+                url: "user/updateUser",//请求地址
+                data: requestMessage,
+                cache: false,  //禁用缓存
+                dataType: "text",//预期返回数据类型
+                async: false,
+                success: function (responseData) {
+                    if ('未登录' == responseData) {
+                        layer.alert(
+                            responseData + ',请先登录再进行此操作',
+                            {icon: 2, closeBtn: 0},
+                            function () {
+                                window.location.replace("/LFitness/");
+                            });
+                    }
+                    if ('修改成功' == responseData) {
+                        layer.alert(
+                            responseData,
+                            {icon: 1, closeBtn: 1},
+                            function () {
+                                window.location.replace("/LFitness/personalMes");
+                            });
+                    }
+                },
+                error: function (c) {
+                    // console.log("服务器响应异常");
+                }
+            });
+            return false;
+        });
+
+        form.on("submit(resetPwdForm)", function (date) {
+            var ensurePwd = $("#L_ensurePwd").val();
+            // var requestdate =JSON.stringify({ensurePwd:$("#L_ensurePwd").val()});
+            $.ajax({
+                type: "post",
+                contentType: "application/json",//指定返回类型
+                url: "user/resetPwd",//请求地址
+                data: ensurePwd,
+                cache: false,  //禁用缓存
+                dataType: "text",//预期返回数据类型
+                async: false,
+                success: function (responseData) {
+                    var icoFlag = 2;
+                    var msg = "";
+                    if ('未登录' == responseData) {
+                        msg = responseData + ',请先登录再进行此操作';
+                    } else {
+                        icoFlag = 1;
+                        msg = responseData + ',登陆试试吧'
+                    }
+                    layer.alert(
+                        msg,
+                        {icon: icoFlag, closeBtn: 0},
+                        function () {
+                            window.location.replace("/LFitness/");
+                        });
+                },
+                error: function (c) {
+                    // console.log("服务器响应异常");
+                }
+            });
+            return false;
+        });
+    });
+
+    layui.use('element', function () {
+        var element = layui.element;
+
+        //…
+    });
+
+    function resetPwdTab() {
+        $("#resetTab").trigger("click");
+    }
+
+    function updateMess() {
+        $("#updateMess").trigger("click");
+    }
+
+    function orderTab() {
+        $("#orderTab").trigger("click");
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>layui.form小例子</title>
+    <!--    http://localhost:8899/LFitness/layui/lay/modules/layer.js-->
+    <link rel="stylesheet" href="/LFitness/layui/css/layui.css" media="all">
+    <script src="/LFitness/js/util/jquery-1.12.4.min.js"></script>
+    <script src="/LFitness/layui/layui.js"></script>
+</head>
+<body>
+<div class="layui-card">
+    <div class="layui-card-header">商品图片更换</div>
+
+    <form class="layui-form"> <!-- 提示：如果你不想用form，你可以换成div等任何一个普通元素 -->
+        <div class="layui-card-body">
+            <div class="layui-tab">
+                <ul class=" layui-tab-title">
+                    <li class="layui-bg-blue layui-this">基础信息展示</li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-row">
+                        <div class="layui-col-md9">
+                            <div class="layui-tab-item layui-show">
+                                <!--            <p>信息展示</p>-->
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">商品id</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="comid" id="L_commid" readonly
+                                               th:value="${data.getComid()}"
+                                               autocomplete="off"
+                                               class="layui-input">
+                                    </div>
+                                    <label class="layui-form-label">名称</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="cName" id="L_cName" readonly
+                                               th:value="${data.getcName()}"
+                                               autocomplete="off"
+                                               class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">价格</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="price" id="L_price" readonly
+                                               th:value="${data.getPrice()}"
+                                               autocomplete="off"
+                                               class="layui-input">
+                                    </div>
+                                    <label class="layui-form-label">描述</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="description" id="L_description" readonly
+                                               th:value="${data.getDescription()}" autocomplete="off"
+                                               class="layui-input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md3">
+                            <img width="220px" height="220px" th:src="'/LFitness/'+${data.getPic()}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-card-body">
+            <div class="layui-tab">
+                <ul class="layui-tab-title">
+                    <button type="button" class="layui-btn" id="comPic">
+                        <i class="layui-icon">&#xe67c;</i>更换图片图片
+                    </button>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                        <div class="layui-form-item">
+                            <div class="layui-input-inline">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- 更多表单结构排版请移步文档左侧【页面元素-表单】一项阅览 -->
+
+    </form>
+
+</div>
+<script>
+    layui.use(['form', 'upload', 'element'], function () {
+        var form = layui.form;
+        var element = layui.element;
+        var upload = layui.upload;
+
+        //执行实例
+        var uploadInst = upload.render({
+            elem: '#comPic' //绑定元素
+            , url: '../commodity/picUpload' //上传接口
+            , data: {"comid": $("#L_commid").val()}
+            , done: function (res) {
+                // var msgValue= res.msg;
+                // layer.msg(res.msg);
+                //上传完毕回调
+                // $("#picPath").attr("value", res.path);
+
+                    layer.alert(
+                        res.msg,
+                        {icon: 1, closeBtn: 0},
+                        function () {
+                            window.location.reload();
+                        });
+
+            }
+            , error: function (e) {
+                // console.log("请求异常回调");
+            }
+        });
+
+        // form.on('submit(addCommButt)', function (data) {
+        //     var requestData = JSON.stringify(data.field);
+        //     layer.msg(requestData);
+        //     // console.log(data);
+        //     $.ajax({
+        //         type: "post",
+        //         contentType: "application/json",//指定返回类型
+        //         url: "commodity/addCommdity",//请求地址
+        //         data: requestData,
+        //         cache: false,  //禁用缓存
+        //         dataType: "text",//预期返回数据类型
+        //         async: false,
+        //         success: function (responseData) {
+        //             if ("上架成功" == responseData) {
+        //                 $("#picPath").attr("value", "");
+        //                 $("#resetBu").click();
+        //                 layer.msg(responseData + "，您可以继续上架其他产品");
+        //
+        //
+        //             } else {
+        //                 layer.alert(
+        //                     '注册失败,即将跳转到登录界面进行登录',
+        //                     {icon: 2, closeBtn: 0},
+        //                     function () {
+        //                         window.location.replace("/LFitness/regist");
+        //                     });
+        //             }
+        //         },
+        //         error: function () {
+        //             // console.log("服务器响应异常");
+        //         }
+        //     });
+        //
+        //     return false;
+        // });
+    });
+
+
+</script>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>罗氏健身</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+    <script type="text/javascript" src="js/util/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bussi/login.js"></script>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+</head>
+<body>
+
+<div class="site-nav-bg">
+    <div class="site-nav w1200">
+        <p class="sn-back-home">
+            <i class="layui-icon layui-icon-home"LFitness></i>
+            <a href="index">首页</a>
+        </p>
+        <div class="sn-quick-menu">
+            <div class="login"><a href="/LFitness/">登录</a></div>
+<!--            <div class="sp-cart"><a href="shopcart.html">购物车</a><span>2</span></div>-->
+        </div>
+    </div>
+</div>
+
+
+<div class="header">
+    <div class="headerLayout w1200">
+        <div class="headerCon">
+            <h1 class="mallLogo">
+                <a href="#" title="罗氏健身">
+                    <span class="logotext">罗氏健身</span>
+                </a>
+            </h1>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content content-nav-base  login-content">
+
+    <div class="login-bg">
+        <div class="login-cont w1200">
+            <div class="form-box">
+                <form class="layui-form" action="index" method="post" onsubmit="return login()">
+                    <legend>账号登录</legend>
+                    <div class="layui-form-item">
+                        <div class="layui-inline iphone">
+                            <div class="layui-input-inline">
+                                <i class="layui-icon layui-icon-username iphone-icon"></i>
+                                <input type="tel" name="username" id="username" lay-verify="required|username"
+                                       placeholder="请输入账号" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline veri-code">
+                            <div class="layui-input-inline">
+                                <i class="layui-icon layui-icon-password iphone-icon"></i>
+                                <input type="pnum" name="pwd" id="pwd" lay-verify="required" placeholder="请输入密码"
+                                       autocomplete="off" class="layui-input">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item login-btn">
+                        <div class="layui-input-block">
+<!--                            <button class="layui-btn"  lay-submit="" lay-filter="demo1" onclick="return login()">登录-->
+<!--                            </button>-->
+                            <button class="layui-btn" type="submit"  lay-submit="" lay-filter="demo1" >登录
+                            </button>
+
+                        </div>
+                        <div class="layui-input-block">
+                            <button class="layui-btn" type="button"  lay-submit="" lay-filter="demo1" > <a href="regist" >注册</a>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="ng-promise-box">
+        <div class="ng-promise w1200">
+            <p class="text">
+                <a class="icon1" href="javascript:;">7天无理由退换货</a>
+                <a class="icon2" href="javascript:;">满99元全场免邮</a>
+                <a class="icon3" style="margin-right: 0" href="javascript:;">100%品质保证</a>
+            </p>
+        </div>
+    </div>
+    <div class="mod_help w1200">
+        <p>
+            <a href="javascript:;">关于我们</a>
+            <span>|</span>
+            <a href="javascript:;">帮助中心</a>
+            <span>|</span>
+            <a href="javascript:;">售后服务</a>
+            <span>|</span>
+            <a href="javascript:;">健身资讯</a>
+            <span>|</span>
+            <a href="javascript:;">关于货源</a>
+        </p>
+        <p class="coty">罗氏健身版权所有 &copy; 2012-2020</p>
+    </div>
+</div>
+<!--<script type="text/javascript">-->
+<!--    layui.config({-->
+<!--        base: '../res/static/js/util' //你存放新模块的目录，注意，不是layui的模块目录-->
+<!--    }).use(['jquery', 'form'], function () {-->
+<!--        var $ = layui.$, form = layui.form;-->
+
+<!--    })-->
+<!--</script>-->
+
+</body>
+</html>

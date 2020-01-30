@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>罗氏健身</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+    <script type="text/javascript" src="js/util/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bussi/login.js"></script>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+</head>
+<body>
+
+
+<div class="site-nav-bg">
+    <div class="site-nav w1200">
+        <p class="sn-back-home">
+            <i class="layui-icon layui-icon-home" LFitness></i>
+            <a href="index">首页</a>
+        </p>
+        <div class="sn-quick-menu">
+            <div class="login"><a href="/LFitness/">登录</a></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="header">
+    <div class="headerLayout w1200">
+        <div class="headerCon">
+            <h1 class="mallLogo">
+                <a href="#" title="罗氏健身">
+                    <span class="logotext">罗氏健身</span>
+                </a>
+            </h1>
+
+        </div>
+    </div>
+</div>
+
+<div class="layui-container ">
+    <div class="layui-card">
+        <div class="layui-card-header" align="center"></div>
+    </div>
+</div>
+<div class="layui-container ">
+    <div class="layui-card">
+
+        <div class="layui-row">
+            <div class="layui-col-md4 layui-col-md-offset4">
+                <div class="layui-card-header layui-bg-black" align="center" style="">用户信息注册</div>
+            </div>
+        </div>
+        <div class="layui-card-body ">
+            <form class="layui-form" method="post" action="">
+                <div class="layui-fluid">
+                    <div class="layui-row">
+                        <div class="layui-col-md4">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">用户名</label>
+                                <div class="layui-input-block">
+                                    <input width="7px" type="text" id="uName" name="uName" required
+                                           lay-verify="required" placeholder="请输入用户名"
+                                           autocomplete="off" class="layui-input">
+                                    <p id="uNameRemark" style="color: red;">不可为空值</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">密码框</label>
+                                <div class="layui-input-inline">
+                                    <input type="password" name="uPwd" required lay-verify="required"
+                                           placeholder="请输入密码" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <div class="layui-form-item ">
+                                <label class="layui-form-label">角色</label>
+                                <div class="layui-input-block">
+                                    <select class="" name=" statue" lay-verify="required">
+                                        <option value="C"></option>
+                                        <option value="M">系统管理员</option>
+
+                                        <option value="C">普通会员</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-row">
+                        <div class="layui-col-md4">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">姓名</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="realname" required lay-verify="required"
+                                           placeholder="请输入姓名"
+                                           autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">性别</label>
+                                <div class="layui-input-inline">
+                                    <div class="layui-input-block">
+                                        <select class="" name="sex" lay-verify="required">
+                                            <option value="男">男</option>
+                                            <option value="女">女</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">年龄</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="age" required lay-verify="required"
+                                           placeholder="请输入年龄" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">联系方式</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="telno" required lay-verify="required" placeholder="请输入联系方式"
+                                           autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">身份证号</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="idcardno" required lay-verify="required"
+                                           placeholder="请输入身份证号"
+                                           autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="layui-row">
+                        <div class="layui-col-md3">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">常住地址</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="address" style="width: 80ch;" required
+                                           lay-verify="required" placeholder="请输入常住地址"
+                                           autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo" type="submit">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+
+    //输入框的值改变时触发
+    $("#uName").on("input", function (e) {
+        var uNameV = $("#uName").val();
+        // console.log(uNameV);
+        if (uNameV == null||uNameV == "") {
+            $("#uNameRemark").text("用户名不可为空");
+        } else {
+            var requestData = JSON.stringify({
+                    uName: uNameV
+                }
+            );
+            $.ajax({
+                type: "post",
+                contentType: "application/json",//指定返回类型
+                url: "user/userNameCheck",//请求地址
+                data: uNameV,
+                cache: false,  //禁用缓存
+                dataType: "text",//预期返回数据类型
+                async: false,
+                success: function (responseData) {
+                    //此时的数据需确保正确无误，异常判断应在执行此回调前自行处理完毕
+                    // console.log(responseData);
+                    $("#uNameRemark").text(responseData);
+                },
+                error: function () {
+                    // console.log("服务器响应异常");
+                }
+            });
+        }
+    });
+
+    $(function () {
+    });
+    //Demo
+    layui.use(['form','layer'], function () {
+        var form = layui.form;
+        form.render();
+        var layer=layui.layer;
+
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            var requestData = JSON.stringify(data.field);
+            // console.log(data);
+            $.ajax({
+                type: "post",
+                contentType: "application/json",//指定返回类型
+                url: "user/register",//请求地址
+                data: requestData,
+                cache: false,  //禁用缓存
+                dataType: "text",//预期返回数据类型
+                async: false,
+                success: function (responseData) {
+                    console.log(responseData);
+                    if ("注册成功" == responseData) {
+                        layer.alert(
+                            '注册成功,即将跳转到登录界面进行登录',
+                            {icon: 1,closeBtn: 0 },
+                            function () {
+                                window.location.replace("/LFitness/");
+                            });
+                    } else {
+                        layer.alert(
+                            '注册失败,即将跳转到登录界面进行登录',
+                            {icon: 2,closeBtn: 0 },
+                            function () {
+                                window.location.replace("/LFitness/regist");
+                            });
+                    }
+                },
+                error: function () {
+                    // console.log("服务器响应异常");
+                }
+            });
+            // layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>
+
+</body>
+</html>
