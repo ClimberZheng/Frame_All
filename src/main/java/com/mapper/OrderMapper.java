@@ -3,7 +3,6 @@ package com.mapper;
 
 import com.entity.dto.OrderDetail;
 import com.entity.po.Order;
-import com.sun.deploy.panel.IProperty;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.mapping.FetchType;
 import org.springframework.stereotype.Component;

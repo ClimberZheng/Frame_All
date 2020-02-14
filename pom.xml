@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.stevenclise</groupId>
-    <artifactId>frame_all</artifactId>
+    <artifactId>frame_shiro</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>frame_all</name>
     <description>Demo project for Spring Boot</description>
@@ -82,14 +82,22 @@
             <scope>true</scope>
         </dependency>
 
-<!--        hutool start-->
+        <!--        hutool start-->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.1.0</version>
         </dependency>
-<!--        hutool end-->
+        <!--        hutool end-->
+        <!--        shiro start -->
+        <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-spring -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>1.4.0</version>
+        </dependency>
 
+        <!--shiro end-->
         <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -111,7 +119,6 @@
             </plugin>
         </plugins>
     </build>
-
 
 
 </project>

@@ -30,13 +30,13 @@ public interface CommodityMapper {
 
     // 修改商品信息商品
     @Update("update commodity  set pic =  #{pic} where comId = #{comid}")
-    void updateById(@Param("comid") int comid,@Param("pic")String pic);
+    void updateById(@Param("comid") int comid, @Param("pic") String pic);
 
 
 
     // 商品下架
     @Delete("delete from commodity where comId = #{comid}")
-    void deleteById(@Param(value = "comid")int comid);
+    void deleteById(@Param(value = "comid") int comid);
 
 
 

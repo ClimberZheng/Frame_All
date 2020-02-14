@@ -1,7 +1,5 @@
 package com.utils;
 
-import org.junit.Test;
-
 public class StringUtil {
 
     // 传入文件名，返回文件类型 eg: 12.12.jpg  => jpg

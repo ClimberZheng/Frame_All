@@ -1,7 +1,6 @@
 package com.entity.dto;
 
 import com.entity.po.Commodity;
-import com.entity.po.FUser;
 
 import java.io.Serializable;
 

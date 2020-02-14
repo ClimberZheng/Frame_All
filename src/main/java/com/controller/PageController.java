@@ -1,16 +1,14 @@
 package com.controller;
 
-import cn.hutool.db.Page;
 import com.entity.po.Commodity;
 import com.entity.po.FUser;
-import com.mapper.CommodityMapper;
 import com.services.CommodityService;
 import com.services.UserInfoService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.junit.Test;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.web.ResourceProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
-import java.util.List;
 
 /**
  * @Author: StevenClise
@@ -59,7 +56,9 @@ public class PageController {
 
     @RequestMapping("logout")
     public String logoutPage(HttpSession session) {
-        session.removeAttribute("loginUser");
+        Subject subject = SecurityUtils.getSubject();
+//        session.removeAttribute("loginUser");
+        subject.logout();
         return "login";
     }
 

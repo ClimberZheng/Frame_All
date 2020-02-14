@@ -1,646 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f8be3db-e0d8-4cac-bbaa-8251e26ff9f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Frame_All.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/dataSources/b53ae609-2faf-440e-bd5f-a397fd2aeedd.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/dataSources/b53ae609-2faf-440e-bd5f-a397fd2aeedd/storage_v2/_src_/schema/example.ahElsQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/dataSources/b53ae609-2faf-440e-bd5f-a397fd2aeedd/storage_v2/_src_/schema/fitnessmark.tXicAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/dataSources/b53ae609-2faf-440e-bd5f-a397fd2aeedd/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/dataSources/b53ae609-2faf-440e-bd5f-a397fd2aeedd/storage_v2/_src_/schema/project.GUuQ7Q.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/free-mybatis-generator-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__cn_hutool_hutool_all_5_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__com_alibaba_fastjson_1_2_58.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__io_lettuce_lettuce_core_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__io_netty_netty_buffer_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__io_netty_netty_codec_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__io_netty_netty_common_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__io_netty_netty_handler_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__io_netty_netty_resolver_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__io_netty_netty_transport_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__io_projectreactor_reactor_core_3_3_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_12_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_12_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_27.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_27.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_27.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_assertj_assertj_core_3_13_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_hamcrest_hamcrest_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_18_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_mockito_mockito_core_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_mybatis_mybatis_3_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_29.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_29.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_spring_aop_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_spring_beans_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_spring_context_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_spring_core_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_spring_expression_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_spring_oxm_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_spring_test_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_spring_tx_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_spring_web_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/libraries/Maven__org_yaml_snakeyaml_1_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/doc/img12.jpg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/doc/notes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/doc/u=3737935302,509763435&amp;fm=26&amp;gp=0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/doc/数据库设计.vsdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/frame_all.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/log/run.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/sql/commodity.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/sql/createDatabse.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/sql/createUser.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/sql/mappers.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/sql/order.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/sql/user_info.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/FrameAllApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/configuration/EnviorData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/configuration/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/controller/CommodityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/controller/PageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/entity/dto/OrderDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/entity/dto/SimpleUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/entity/dto/UserDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/entity/po/Commodity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/entity/po/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/entity/po/FUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/entity/po/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/entity/po/UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/mapper/CommodityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/mapper/FUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/mapper/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/mapper/UserInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/services/ApplicationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/services/CommodityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/services/FUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/services/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/services/UserInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/java/com/utils/StringUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/public/addCommodity.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/public/changeCommPic.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/public/commodity.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/public/details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/public/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/public/manage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/public/order.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/public/personalMes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/public/regist.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/public/sysUser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/public/tableReload.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/public/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/public/vipUser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/public/welcome.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/css/font_24081_qs69ykjbea.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/css/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/buy_banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/car-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/details_img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/details_img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/details_imgbig.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/hot1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/hot2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/hot3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/hot4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/hot5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/hot6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/hot7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/hot8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/hot9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/icon_gou.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/img12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/load_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/more1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/more2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/more3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/more4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/more5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/new1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/new2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/off-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/paging_img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/paging_img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/paging_img3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/s_img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/s_img10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/s_img11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/s_img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/s_img3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/s_img4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/s_img5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/s_img6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/s_img7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/s_img8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/s_img9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/sort-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/tuan_img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/tuan_img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/tuan_img3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/tuan_img4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/tuan_img5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/tuan_img6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/tuan_img7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/tuan_img_banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/us-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/us_banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/us_icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/us_icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/us_icon3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/us_img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/us_img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/img/us_img3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/js/bussi/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/js/bussi/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/js/util/car.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/js/util/jquery-1.12.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/js/util/mm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/js/util/requestUtil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/js/util/xiuxiu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/css/modules/layer/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/css/modules/layer/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/20.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/27.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/28.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/29.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/30.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/31.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/32.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/33.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/34.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/35.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/37.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/38.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/39.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/41.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/42.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/43.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/44.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/45.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/46.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/47.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/48.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/51.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/52.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/53.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/54.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/55.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/56.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/57.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/58.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/59.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/60.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/61.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/62.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/63.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/65.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/66.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/67.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/68.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/69.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/70.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/71.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/images/face/9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/colorpicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/layedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/laytpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/rate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/lay/modules/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/layui.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/layui/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/1663b394-62f1-41c6-a796-b0f56f8c159d.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/3cf845a3-7094-4f9c-9672-ccbff3839ce0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/commodity9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/header.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/img12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/pic/load_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/main/resources/static/util/crossdomain.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/src/test/java/com/FrameAllApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/FrameAllApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/configuration/EnviorData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/configuration/RedisConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/controller/CommodityController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/controller/LoginController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/controller/OrderController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/controller/PageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/entity/dto/OrderDetail.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/entity/dto/SimpleUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/entity/dto/UserDetail.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/entity/po/Commodity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/entity/po/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/entity/po/FUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/entity/po/Order.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/entity/po/UserInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/mapper/CommodityMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/mapper/FUserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/mapper/OrderMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/mapper/UserInfoMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/services/ApplicationService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/services/CommodityService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/services/FUserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/services/OrderService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/services/UserInfoService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/com/utils/StringUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/public/addCommodity.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/public/changeCommPic.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/public/commodity.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/public/details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/public/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/public/manage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/public/order.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/public/personalMes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/public/regist.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/public/sysUser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/public/tableReload.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/public/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/public/vipUser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/public/welcome.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/css/font_24081_qs69ykjbea.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/css/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/buy_banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/car-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/details_img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/details_img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/details_imgbig.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/hot1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/hot2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/hot3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/hot4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/hot5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/hot6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/hot7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/hot8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/hot9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/icon_gou.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/img12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/load_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/more1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/more2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/more3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/more4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/more5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/new1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/new2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/off-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/paging_img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/paging_img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/paging_img3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/s_img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/s_img10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/s_img11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/s_img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/s_img3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/s_img4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/s_img5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/s_img6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/s_img7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/s_img8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/s_img9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/sort-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/tuan_img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/tuan_img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/tuan_img3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/tuan_img4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/tuan_img5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/tuan_img6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/tuan_img7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/tuan_img_banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/us-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/us_banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/us_icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/us_icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/us_icon3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/us_img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/us_img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/img/us_img3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/js/bussi/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/js/bussi/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/js/util/car.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/js/util/jquery-1.12.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/js/util/mm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/js/util/requestUtil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/js/util/xiuxiu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/css/modules/layer/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/css/modules/layer/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/20.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/27.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/28.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/29.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/30.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/31.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/32.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/33.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/34.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/35.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/37.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/38.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/39.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/41.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/42.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/43.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/44.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/45.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/46.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/47.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/48.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/51.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/52.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/53.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/54.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/55.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/56.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/57.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/58.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/59.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/60.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/61.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/62.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/63.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/65.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/66.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/67.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/68.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/69.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/70.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/71.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/images/face/9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/colorpicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/layedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/laytpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/rate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/lay/modules/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/layui.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/layui/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/1663b394-62f1-41c6-a796-b0f56f8c159d.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/3cf845a3-7094-4f9c-9672-ccbff3839ce0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/commodity9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/header.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/img12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/pic/load_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/classes/static/util/crossdomain.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frame_all/target/test-classes/com/FrameAllApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6f8be3db-e0d8-4cac-bbaa-8251e26ff9f8" name="Default Changelist" comment="直接覆盖成了含有shiro的版本（登录认证、请求过滤）">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_cache_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_ogdl_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_cipher_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_hash_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_event_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_lang_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/security/ShiroConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/security/UserRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frame_all.iml" beforeDir="false" afterPath="$PROJECT_DIR$/frame_all.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/CommodityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/CommodityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/dto/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/entity/dto/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/CommodityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/CommodityMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/UserInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/services/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/services/ApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/services/CommodityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/services/CommodityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/services/FUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/services/FUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/services/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/services/UserInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/StringUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -688,13 +82,19 @@
       <list>
         <option value="Interface" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -710,6 +110,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1VeTeRvmk3BuS6y8T11vA34RNfc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -731,23 +134,20 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.18698579" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\project\personal\frame_all\src\main\resources\public" />
-      <recent name="F:\project\personal\frame_all\src\main\resources\static\util" />
-      <recent name="F:\project\personal\frame_all\src\main\resources\static\css" />
-      <recent name="F:\project\personal\frame_all\src\main\resources\static\img" />
-      <recent name="F:\project\personal\frame_all\doc" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\ideaProject\frame_all\src\main\resources\web\res\static\js\util\bussi" />
+      <recent name="F:\ideaProject\frame_all\src\main\resources\web\pages" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.entity.dto" />
@@ -755,9 +155,12 @@
       <recent name="com.entity.po" />
       <recent name="com.controller" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\ideaProject\frame_all\src\main\resources\web\res\static\js\util\bussi" />
-      <recent name="F:\ideaProject\frame_all\src\main\resources\web\pages" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\project\personal\frame_all\src\main\resources\public" />
+      <recent name="F:\project\personal\frame_all\src\main\resources\static\util" />
+      <recent name="F:\project\personal\frame_all\src\main\resources\static\css" />
+      <recent name="F:\project\personal\frame_all\src\main\resources\static\img" />
+      <recent name="F:\project\personal\frame_all\doc" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.FrameAllApplication ">
@@ -801,7 +204,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.FrameAllApplication " />
+        <item itemvalue="JUnit.CommodityController" />
         <item itemvalue="JavaScript Debug.changeCommPic.html" />
+        <item itemvalue="Spring Boot.FrameAllApplication " />
         <item itemvalue="JUnit.CommodityController" />
       </list>
     </recent_temporary>
@@ -823,7 +228,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="57461cec-19d6-4368-be78-6443332f3246" name="Default Changelist" comment="" />
+      <changelist id="6f8be3db-e0d8-4cac-bbaa-8251e26ff9f8" name="Default Changelist" comment="" />
       <created>1574226735481</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -885,13 +290,55 @@
       <workItem from="1580006918721" duration="32540000" />
       <workItem from="1580180005074" duration="28450000" />
       <workItem from="1580363344037" duration="4939000" />
+      <workItem from="1580388268696" duration="1627000" />
+      <workItem from="1580390972434" duration="379000" />
+      <workItem from="1581668250680" duration="91000" />
+      <workItem from="1581668494617" duration="1677000" />
     </task>
+    <task id="LOCAL-00001" summary="功能都正常基线版本">
+      <created>1580388485494</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580388485494</updated>
+    </task>
+    <task id="LOCAL-00002" summary="为基线版本增加一个描述文件">
+      <created>1580389059141</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580389059141</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="功能都正常基线版本" />
+    <MESSAGE value="为基线版本增加一个描述文件" />
+    <MESSAGE value="直接覆盖成了含有shiro的版本（登录认证、请求过滤）" />
+    <option name="LAST_COMMIT_MESSAGE" value="直接覆盖成了含有shiro的版本（登录认证、请求过滤）" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="28" key="#Project_Structure" timestamp="1581670097571">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="28" key="#Project_Structure/0.0.1366.738@0.0.1366.738" timestamp="1581670097571" />
     <state x="192" y="31" width="1174" height="689" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580103922271">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -920,6 +367,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1578926435501" />
+    <state x="180" y="0" key="CommitChangelistDialog2" timestamp="1581670181997">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="180" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581670181997" />
     <state width="450" height="438" key="DebuggerActiveHint" timestamp="1580089874759">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -980,10 +431,18 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="254" y="31" key="Registry/0.0.1366.738@0.0.1366.738" timestamp="1577879154657" />
-    <state x="285" y="12" width="955" height="715" key="SettingsEditor" timestamp="1580385981616">
+    <state x="489" y="94" key="RollbackChangesDialog" timestamp="1581669032972">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="285" y="12" width="955" height="715" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1580385981616" />
+    <state x="489" y="94" key="RollbackChangesDialog/0.0.1366.738@0.0.1366.738" timestamp="1581669032972" />
+    <state x="285" y="12" width="955" height="715" key="SettingsEditor" timestamp="1581669069851">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="285" y="12" width="955" height="715" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1581669069851" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1580391054567">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1580391054567" />
     <state x="413" y="174" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1579091799670">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -992,10 +451,14 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="375" y="197" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1577612674708" />
-    <state x="22" y="0" width="1342" height="738" key="find.popup" timestamp="1580364046829">
+    <state x="475" y="286" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581669101366">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="22" y="0" width="1342" height="738" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1580364046829" />
+    <state x="475" y="286" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1581669101366" />
+    <state x="22" y="0" width="1342" height="738" key="find.popup" timestamp="1581668917061">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="22" y="0" width="1342" height="738" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1581668917061" />
     <state x="339" y="165" key="run.anything.popup" timestamp="1580183004427">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

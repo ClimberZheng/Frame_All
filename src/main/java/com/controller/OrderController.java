@@ -2,13 +2,9 @@ package com.controller;
 
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.RandomUtil;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.entity.dto.OrderDetail;
-import com.entity.po.Commodity;
 import com.entity.po.FUser;
 import com.entity.po.Order;
-import com.services.CommodityService;
 import com.services.OrderService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

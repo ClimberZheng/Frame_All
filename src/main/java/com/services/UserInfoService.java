@@ -36,7 +36,7 @@ public class UserInfoService {
         return userInfoMapper.selectUserDetailByStatue(statue);
     }
 
-    public List<UserDetail> findByStatue(String statue,String  keyW) {
+    public List<UserDetail> findByStatue(String statue, String  keyW) {
         return userInfoMapper.selectUserDetailByStatue_keyW(statue,"%"+keyW+"%");
     }
 

@@ -2,7 +2,6 @@ package com.services;
 
 import com.entity.po.Commodity;
 import com.mapper.CommodityMapper;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

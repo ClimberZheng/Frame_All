@@ -1,6 +1,5 @@
 package com.services;
 
-import com.entity.dto.SimpleUser;
 import com.entity.dto.UserDetail;
 import com.entity.po.FUser;
 import com.mapper.FUserMapper;
@@ -8,9 +7,6 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.beans.SimpleBeanInfo;
-import java.util.List;
 
 @Service
 public class FUserService {
